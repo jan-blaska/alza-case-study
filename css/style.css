@@ -16,6 +16,7 @@ body {
 	background: #fff;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to bottom, #fff, #bae2fc);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to bottom, #fff, #bae2fc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Layout */
@@ -24,10 +25,116 @@ body {
 	margin: 0 auto;
 }
 
-header,
 section,
 footer {
 	background-color: #81ff3c;
 }
 
 /* Header */
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 100px;
+}
+
+header img {
+	width: 160px;
+}
+
+.header--search-bar {
+	display: flex;
+	width: 450px;
+	border: solid 5px #edf5fc;
+}
+
+.header--search-bar i {
+	position: absolute;
+	padding: 0.75rem; /* 12px */
+	min-width: 40px;
+}
+
+.header--search-bar-input,
+.header--search-bar-btn {
+	font-size: 0.875rem; /* 14px */
+	font-family: inherit;
+	padding: 0.7em 0.7em;
+}
+
+.header--search-bar-input {
+	width: 100%;
+	padding-left: 2.25em;
+	border: none;
+}
+
+.header--search-bar-btn {
+	background-color: #0094e7;
+	color: #fff;
+	border: none;
+}
+
+.header--search-bar-btn:hover,
+.header--search-bar-btn:focus {
+	background-color: #0281ca;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+.header--user {
+	display: flex;
+	gap: 10px;
+}
+
+.header--user i {
+	color: #20426e;
+	background-color: #e0e0e0;
+	padding: 10px;
+	border-radius: 50%;
+}
+
+.header--user span,
+.header--user p {
+	margin: 0;
+	padding: 0;
+	font-size: 0.75rem; /* 12px */
+}
+
+.header--user span {
+	font-weight: bold;
+}
+
+.header--icons {
+	display: flex;
+	gap: 20px;
+}
+
+.header--icons i {
+	font-size: 1.5rem; /* 24 px */
+}
+
+.header--icons-interface {
+	display: flex;
+	border-left: 1px solid #d2d2d2;
+	border-right: 1px solid #d2d2d2;
+	padding: 0 1rem;
+	gap: 15px;
+}
+
+.header--icon-cart {
+	color: #a4a4a4;
+}
+
+.header--icon-cart:hover {
+	color: #1e3050;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+
+
+
+/* Footer */
+footer {
+	margin-top: 30px;
+	border: none;
+}

@@ -1,5 +1,6 @@
 import { dataArray } from "./data.js";
 
+/* animated text while scrolling */ 
 const images = document.querySelectorAll('.anim');
 
 let observer = new IntersectionObserver((entries) => {

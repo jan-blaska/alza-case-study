@@ -41,14 +41,44 @@ html {
 
 /* Header */
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	min-height: 100px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 50px 50px;
+	grid-template-areas: 
+      "header--user       header--logo       header--icons"
+      "header--search-bar header--search-bar header--search-bar";
 }
 
-header img {
-	width: 160px;
+@media (min-width: 800px) {
+	header {
+		grid-template-rows: 50px;
+		grid-template-areas: 
+		"header--logo header--search-bar header--user header--icons";
+	}
+	.header--logo {
+		width: 160px;
+	}
+}
+
+.header--logo {
+	grid-area: header--logo;
+}
+.header--search-bar {
+	grid-area: header--search-bar;
+}
+.header--user {
+	grid-area: header--user;
+}
+.header--icons {
+	grid-area: header--icons;
+}
+
+.header--logo {
+	width: 100px;
+}
+
+.header--icons-interface {
+	display: none;
 }
 
 .header--search-bar {

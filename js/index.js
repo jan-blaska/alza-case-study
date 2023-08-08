@@ -87,6 +87,5 @@ const loop = () => {
     controls.update();
     renderer.render(scene, camera);
     window.requestAnimationFrame(loop);
-
 }
 loop();

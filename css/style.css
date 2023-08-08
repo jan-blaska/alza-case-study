@@ -400,9 +400,11 @@ section ul li span strong {
 .section--img {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	margin: 40px 0;
+	gap: 40px;
 }
 
 .section--text-alzak {

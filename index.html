@@ -18,6 +18,18 @@
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<!-- Font Awesome CDN -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- CDN for Three.js -->
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+        "three": "https://unpkg.com/three@v0.155.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@v0.155.0/examples/jsm/"
+        }
+    }
+    </script>
+    <!-- CDN for gsap -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
 </head>
 
 <body>
@@ -167,6 +179,7 @@
 						<p class="bold">Vyzkoušejte si, jak se vám hodí spotřebiče do domácnosti s rozšířenou realitou</p>
 						<p>S funkcí AR/3D si můžete prohlédnout vybrané produkty u vás doma, ještě předtím, než je doma rozbalíte. Přesvědčte se, že se vše vejde a hodí přesně tak jak má.</p>
 					</div>
+					<canvas class="webgl" id="webgl"></canvas>
 					<div class="anim anim-right anim-li hidden">
 						<p class="bold">Tmavý režim</p>
 						<p>Pokud preferujete ve vašem telefonu tmavý režim, tak se nemusíte obávat. Naší aplikaci si také můžete přehodit do tmavého kabátu.</p>

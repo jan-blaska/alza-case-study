@@ -43,20 +43,22 @@ html {
 header {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 50px 50px;
+	grid-template-rows: 10px 50px 50px 10px;
 	grid-template-areas: 
+      ". . ."
       "header--user       header--logo       header--icons"
-      "header--search-bar header--search-bar header--search-bar";
+      "header--search-bar header--search-bar header--search-bar"
+	  ". . .";
 }
 
 @media (min-width: 800px) {
 	header {
-		grid-template-rows: 50px;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-template-rows: 10px 50px 10px;
 		grid-template-areas: 
-		"header--logo header--search-bar header--user header--icons";
-	}
-	.header--logo {
-		width: 160px;
+		". . . ."
+		"header--logo header--search-bar header--user header--icons"
+		". . . .";
 	}
 }
 
@@ -73,17 +75,20 @@ header {
 	grid-area: header--icons;
 }
 
-.header--logo {
+.header--logo img {
 	width: 100px;
 }
 
-.header--icons-interface {
-	display: none;
+.header--logo,
+.header--user,
+.header--icons  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .header--search-bar {
 	display: flex;
-	width: 450px;
 	border: solid 5px #edf5fc;
 }
 
@@ -120,7 +125,6 @@ header {
 }
 
 .header--user {
-	display: flex;
 	gap: 10px;
 }
 
@@ -128,7 +132,7 @@ header {
 	color: #20426e;
 	background-color: #e0e0e0;
 	padding: 10px;
-	border-radius: 50%;
+	border-radius: 50%;	
 }
 
 .header--user span,
@@ -143,20 +147,19 @@ header {
 }
 
 .header--icons {
-	display: flex;
-	gap: 20px;
+	gap: 5px;
 }
 
 .header--icons i {
-	font-size: 1.5rem; /* 24 px */
+	font-size: 1.125rem; /* 18 px */
 }
 
 .header--icons-interface {
 	display: flex;
 	border-left: 1px solid #d2d2d2;
 	border-right: 1px solid #d2d2d2;
-	padding: 0 1rem;
-	gap: 15px;
+	padding: 0 10px;
+	gap: 5px;
 }
 
 .header--icon-cart {
@@ -167,6 +170,22 @@ header {
 	color: #1e3050;
 	transition: 0.5s;
 	cursor: pointer;
+}
+
+@media (min-width: 800px) {
+	.header--logo img {
+		width: 160px;
+	}
+	.header--icons i {
+		font-size: 1.5rem; /* 24 px */
+	}
+	.header--icons-interface {
+		padding: 0 20px;
+		gap: 10px;
+	}
+	.header--icons {
+		gap: 10px;
+	}
 }
 
 /* Subheader */

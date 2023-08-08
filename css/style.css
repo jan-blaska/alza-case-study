@@ -45,10 +45,10 @@ header {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 10px 50px 50px 10px;
 	grid-template-areas: 
-      ". . ."
-      "header--user       header--logo       header--icons"
-      "header--search-bar header--search-bar header--search-bar"
-	  ". . .";
+	". . ."
+    "header--user       header--logo       header--icons"
+    "header--search-bar header--search-bar header--search-bar"
+	". . .";
 }
 
 @media (min-width: 800px) {
@@ -89,6 +89,7 @@ header {
 
 .header--search-bar {
 	display: flex;
+	margin: 0 20px;
 	border: solid 5px #edf5fc;
 }
 
@@ -142,10 +143,6 @@ header {
 	font-size: 0.75rem; /* 12px */
 }
 
-.header--user span {
-	font-weight: bold;
-}
-
 .header--icons {
 	gap: 5px;
 }
@@ -175,6 +172,9 @@ header {
 @media (min-width: 800px) {
 	.header--logo img {
 		width: 160px;
+	}
+	.header--search-bar {
+		margin: 0px;
 	}
 	.header--icons i {
 		font-size: 1.5rem; /* 24 px */
@@ -265,9 +265,6 @@ header {
 	width: 80px;
 }
 
-
-
-
 @media (min-width: 800px) {
 	.subheader {
 		padding: 65px;
@@ -288,7 +285,7 @@ header {
 		justify-content: space-between;
 	}
 	.subheader--main-desc h1 {
-		font-size: 2.5rem; /* 50px */
+		font-size: 2.5rem; /* 40px */
 	}
 	.subheader--main-desc p {
 		font-size: 1rem; /* 16px */
@@ -309,10 +306,75 @@ section {
 	min-height: 100vh;
 	background-color: #faefb1;
 	color: #000;
+	padding: 20px;
 }
 
 section h1 {
-	font-size: 3rem;
+	font-size: 2rem; /* 32 px */
+	font-weight: 200;
+	margin: 0;
+}
+
+section h1 span {
+	font-weight: bold;
+}
+
+section p {
+	font-size: 1.25rem; /* 20px */
+	font-family: 'Kaushan Script', cursive;	
+	opacity: 0;
+	color: #6b6363;
+}
+
+section ul {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+}
+
+section ul li {
+	margin: 10px 0;
+	font-size: 1rem; /* 16px */
+	padding: 30px;
+	border-radius: 10px;
+	background-color: rgba(255,255, 255, 0.4);
+}
+
+.dark ul li {
+	background-color: rgba(255,255, 255, 0.2);
+}
+
+.light ul li {
+	background-color: rgba(255,255, 255, 0.8);
+}
+
+.dark p {
+	color: #acacac;
+}
+
+section ul li i {
+	font-size: 50px;
+}
+
+section ul li span {
+	display: block;
+	margin-top: 10px;
+	line-height: 1.5;
+}
+
+section ul li span strong {
+	display: block;
+	font-size: 1.1em;
+}
+
+.yellow h1,
+.yellow ul li i {
+	color: #20A39E;
+}
+
+.dark h1,
+.dark ul li i {
+	color: #81fe3e;
 }
 
 .content {
@@ -331,11 +393,30 @@ section h1 {
 	background-color: #f8f8f8	
 }
 
-.dark h1 {
-	color: #81fe3e;
+.section--text {
+	width: 100%;
+}
+
+.section--img {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0;
+}
+
+.section--text-alzak {
+	width: 250px;
+}
+
+.img-section-cellphone {
+	width: 60%;
 }
 
 @media (min-width: 800px) {
+	section {
+		padding: 65px;
+	}
 	.content {
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -343,50 +424,69 @@ section h1 {
 	.dark {
 		flex-direction: row;
 	}
+	.section--text {
+		width: 60%;
+	}
+	.section--img {
+		width: 40%;
+	}
+	.section--text-alzak {
+		width: 400px;
+	}
+	.img-section-cellphone {
+		margin-left: auto;
+		margin-right: 0;
+	}
+	.dark .img-section-cellphone {
+		margin-left: 0;
+		margin-right: auto;
+	}
+	section h1 {
+		font-size: 2.5rem; /* 40 px */
+	}
+	section p {
+		font-size: 1.375rem; /* 22px */
+	}
+	section ul li {
+		font-size: 1.125rem; /* 18px */
+	}
 }
 
-.left {
-	text-align: left;
-	display: grid;
-	place-items: center;
-}
-
-.img-section-1-alzak {
-	width: 400px;
-}
-
-.img-section-cellphone {
-	width: 70%;
+@media (min-width: 1200px) {
+	section h1 {
+		font-size: 3.125rem; /* 50px */
+	}
+	section p {
+		font-size: 1.55rem; /* 25px */
+	}
 }
 
 
 /* Text animation */
 .anim-li:nth-child(1) {
-	animation-delay: 2s;
-	
+	animation-delay: 1000ms; 
 }
 .anim-li:nth-child(2) {
-	animation-delay: 3s;
-	
+	animation-delay: 1500ms;
 }
 .anim-li:nth-child(3) {
-	animation-delay: 4s;
+	animation-delay: 2000ms;
 }
 
 .anim1-left {
-	animation: anim1-left 1s forwards ease-out;
+	animation: anim1-left 500ms forwards ease-out;
 	opacity: 0;
 }
 
 .anim1-right {
-	animation: anim1-right 1s forwards ease-out;
+	animation: anim1-right 500ms forwards ease-out;
 	opacity: 0;
 }
 
 .anim1-down {
-	animation: anim1-down 1s forwards ease-out;
+	animation: anim1-down 500ms forwards ease-out;
 	opacity: 0;
-	animation-delay: 1s;
+	animation-delay: 500ms;
 }
 
 .show {
@@ -433,6 +533,15 @@ section h1 {
 
 /* Footer */
 footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	margin-top: 30px;
-	border: none;
+	background-color: #f8f8f8;
+	padding: 50px;
+}
+
+footer p {
+	font-size: 1rem; /* 16px */
 }

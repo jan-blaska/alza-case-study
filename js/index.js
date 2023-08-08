@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
+
 /* animated text while scrolling */ 
 const images = document.querySelectorAll('.anim');
 
@@ -41,7 +42,7 @@ images.forEach(image => {
 /* 3D model */
 // Scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x353535)
+scene.background = new THREE.Color(0xf8f8f8)
 
 // Create 3D model
 const geometry = new THREE.TorusKnotGeometry( 12, 3.4, 205, 20, 2, 3 ); 
@@ -64,7 +65,7 @@ scene.add( light );
 
 // Camera
 const camera = new THREE.PerspectiveCamera(45, 300 / 300, 0.1, 100);
-camera.position.z = 80;
+camera.position.z = 60;
 scene.add( camera );
 
 // Renderer

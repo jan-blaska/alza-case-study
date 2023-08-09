@@ -34,11 +34,6 @@ html {
 	margin: 0 auto;
 }
 
-/* Typography */
-.bold {
-	font-weight: bold;
-}
-
 /* Header */
 header {
 	background: #fff;
@@ -489,7 +484,6 @@ section ul li span strong {
 		font-size: 1.55rem; /* 25px */
 	}
 }
-
 
 /* Text animation */
 .anim-li:nth-child(1) {

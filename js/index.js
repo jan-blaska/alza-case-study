@@ -1,7 +1,6 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-
 /* animated text while scrolling */ 
 const images = document.querySelectorAll('.anim');
 

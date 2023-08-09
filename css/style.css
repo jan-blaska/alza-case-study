@@ -431,8 +431,9 @@ section ul li span strong {
 	border-radius: 10px;
 	width: 60%;
 	text-align: center;
-	background-color: rgb(214, 48, 48);
+	background-color: #d63030;
 	color: #fff;
+	letter-spacing: 1px;
 }
 
 .cta:hover {

@@ -3,7 +3,7 @@
 ### In this project I have used
 - Favicon
 - Google Fonts
-- CDNs for Font Awesome icons and 3D librady Three.js
+- CDNs for Font Awesome icons and 3D library Three.js
 - JS script for text animations
 - JS script for 3D model
 - CSS responsive design

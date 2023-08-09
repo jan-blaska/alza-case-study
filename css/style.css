@@ -41,6 +41,14 @@ html {
 
 /* Header */
 header {
+	background: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 2;
+	box-shadow: 1px 1px 5px rgba(0,0, 0, 0.2);
+}
+
+header .container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 10px 50px 50px 10px;
@@ -52,7 +60,7 @@ header {
 }
 
 @media (min-width: 800px) {
-	header {
+	header .container {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		grid-template-rows: 10px 50px 10px;
 		grid-template-areas: 
@@ -192,7 +200,7 @@ header {
 .subheader {
 	min-height: 730px;
 	background-color: #f8f8f8;
-	padding: 20px;
+	padding: 140px 20px 20px;
 }
 
 .subheader--main {
@@ -267,7 +275,7 @@ header {
 
 @media (min-width: 800px) {
 	.subheader {
-		padding: 65px;
+		padding: 135px 65px 65px;
 	}
 	.subheader--main {
 		display: flex;
@@ -415,6 +423,22 @@ section ul li span strong {
 	width: 60%;
 }
 
+.cta {
+	text-decoration: none;
+	font-family: inherit;
+	font-size: 24px;
+	padding: 10px;
+	border-radius: 10px;
+	width: 60%;
+	text-align: center;
+	background-color: rgb(214, 48, 48);
+	color: #fff;
+}
+
+.cta:hover {
+	background-color: red;
+}
+
 @media (min-width: 800px) {
 	section {
 		padding: 65px;
@@ -435,11 +459,13 @@ section ul li span strong {
 	.section--text-alzak {
 		width: 400px;
 	}
-	.img-section-cellphone {
+	.img-section-cellphone,
+	.cta {
 		margin-left: auto;
 		margin-right: 0;
 	}
-	.dark .img-section-cellphone {
+	.dark .img-section-cellphone,
+	.dark .cta {
 		margin-left: 0;
 		margin-right: auto;
 	}
@@ -531,7 +557,6 @@ section ul li span strong {
 		opacity: 1;
 	}
 }
-
 
 /* Footer */
 footer {
